@@ -35,8 +35,8 @@ namespace Skladiste
             textBox2.Text = row.Cells[1].Value.ToString();
             textBox3.Text = row.Cells[2].Value.ToString();
             textBox4.Text = row.Cells[3].Value.ToString();
-            richTextBox1.Text = row.Cells[4].Value.ToString();
-            textBox5.Text = row.Cells[5].Value.ToString();   
+            //richTextBox1.Text = row.Cells[4].Value.ToString();
+            //textBox5.Text = row.Cells[5].Value.ToString();   
         }
 
         //metoda button kontrola za UPDATE BAZE
@@ -44,7 +44,8 @@ namespace Skladiste
         {
             try
             {
-                robaTableAdapter.Update(skladisteDataSet);
+                //robaTableAdapter.Update(skladisteDataSet);
+                firmeTableAdapter.Update(skladisteDataSet);
                 MessageBox.Show("Database updated");
             }
             catch (Exception ex)
@@ -74,7 +75,8 @@ namespace Skladiste
         private void button5_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'skladisteDataSetRoba.Roba' table. You can move, or remove it, as needed.
-            this.robaTableAdapter.Fill(this.skladisteDataSet.Roba);
+            //this.robaTableAdapter.Fill(this.skladisteDataSet.Roba);
+            this.firmeTableAdapter.Fill(this.skladisteDataSet.Firme);
         }
     }
 }

@@ -7,9 +7,12 @@
     }
 }
 
-namespace Skladiste.SkladisteDataSetTableAdapters {
-    
-    
+namespace Skladiste.SkladisteDataSetTableAdapters
+{
+    partial class FirmeTableAdapter
+    {
+    }
+
     public partial class StavkaPrimkeTableAdapter {
     }
 }
