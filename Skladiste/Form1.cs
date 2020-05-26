@@ -21,7 +21,7 @@ namespace Skladiste
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "skladisteDataSet.Firme". При необходимости она может быть перемещена или удалена.
-            //this.firmeTableAdapter.Fill(this.skladisteDataSet.Firme);
+            this.firmeTableAdapter.Fill(this.skladisteDataSet.Firme);
 
         }
 

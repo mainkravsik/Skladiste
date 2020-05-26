@@ -116,7 +116,7 @@ namespace Skladiste
         {
             SkladisteDataSet.IzdatnicaDataTable dt = new SkladisteDataSet.IzdatnicaDataTable();
             var newRow = dt.NewIzdatnicaRow();
-            newRow.NazivFirme = (int)comboBox1.SelectedValue;
+            newRow.Factory = (int)comboBox1.SelectedValue;
             newRow.Datum = dateTimePicker1.Value;
             dt.AddIzdatnicaRow(newRow);
             izdatnicaTableAdapter1.Update(dt);

@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDFirmeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oIBFirmeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazivFirmeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_wDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FactoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firmeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.skladisteDataSetFirme = new Skladiste.SkladisteDataSet();
             this.firmeTableAdapter = new Skladiste.SkladisteDataSetTableAdapters.FirmeTableAdapter();
@@ -48,9 +48,9 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDFirmeDataGridViewTextBoxColumn,
-            this.oIBFirmeDataGridViewTextBoxColumn,
-            this.nazivFirmeDataGridViewTextBoxColumn});
+            this.ID_wDataGridViewTextBoxColumn,
+            this.BEDataGridViewTextBoxColumn,
+            this.FactoryDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.firmeBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(162, 12);
             this.dataGridView1.Name = "dataGridView1";
@@ -58,24 +58,24 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // iDFirmeDataGridViewTextBoxColumn
+            // ID_wDataGridViewTextBoxColumn
             // 
-            this.iDFirmeDataGridViewTextBoxColumn.DataPropertyName = "IDFirme";
-            this.iDFirmeDataGridViewTextBoxColumn.HeaderText = "IDFirme";
-            this.iDFirmeDataGridViewTextBoxColumn.Name = "iDFirmeDataGridViewTextBoxColumn";
+            this.ID_wDataGridViewTextBoxColumn.DataPropertyName = "ID_w";
+            this.ID_wDataGridViewTextBoxColumn.HeaderText = "ID_w";
+            this.ID_wDataGridViewTextBoxColumn.Name = "ID_wDataGridViewTextBoxColumn";
             // 
-            // oIBFirmeDataGridViewTextBoxColumn
+            // BEDataGridViewTextBoxColumn
             // 
-            this.oIBFirmeDataGridViewTextBoxColumn.DataPropertyName = "OIBFirme";
-            this.oIBFirmeDataGridViewTextBoxColumn.HeaderText = "OIBFirme";
-            this.oIBFirmeDataGridViewTextBoxColumn.Name = "oIBFirmeDataGridViewTextBoxColumn";
+            this.BEDataGridViewTextBoxColumn.DataPropertyName = "BE";
+            this.BEDataGridViewTextBoxColumn.HeaderText = "BE";
+            this.BEDataGridViewTextBoxColumn.Name = "BEDataGridViewTextBoxColumn";
             // 
-            // nazivFirmeDataGridViewTextBoxColumn
+            // FactoryDataGridViewTextBoxColumn
             // 
-            this.nazivFirmeDataGridViewTextBoxColumn.DataPropertyName = "NazivFirme";
-            this.nazivFirmeDataGridViewTextBoxColumn.HeaderText = "NazivFirme";
-            this.nazivFirmeDataGridViewTextBoxColumn.Name = "nazivFirmeDataGridViewTextBoxColumn";
-            this.nazivFirmeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.FactoryDataGridViewTextBoxColumn.DataPropertyName = "Factory";
+            this.FactoryDataGridViewTextBoxColumn.HeaderText = "Factory";
+            this.FactoryDataGridViewTextBoxColumn.Name = "FactoryDataGridViewTextBoxColumn";
+            this.FactoryDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // firmeBindingSource
             // 
@@ -136,9 +136,9 @@
         private System.Windows.Forms.BindingSource firmeBindingSource;
         private SkladisteDataSetTableAdapters.FirmeTableAdapter firmeTableAdapter;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDFirmeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn oIBFirmeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nazivFirmeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_wDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FactoryDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button2;
     }
 }

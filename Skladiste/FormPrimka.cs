@@ -117,7 +117,7 @@ namespace Skladiste
         {
             SkladisteDataSet.PrimkaDataTable dt = new SkladisteDataSet.PrimkaDataTable();
             var newRow = dt.NewPrimkaRow();
-            newRow.NazivFirme = (int)comboBox1.SelectedValue;
+            newRow.Factory = (int)comboBox1.SelectedValue;
             newRow.Datum = dateTimePicker1.Value;
             dt.AddPrimkaRow(newRow);
             primkaTableAdapter1.Update(dt);

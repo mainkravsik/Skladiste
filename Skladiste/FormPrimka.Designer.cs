@@ -236,13 +236,13 @@
             // comboBox1
             // 
             this.comboBox1.DataSource = this.firmeBindingSource;
-            this.comboBox1.DisplayMember = "NazivFirme";
+            this.comboBox1.DisplayMember = "Factory";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(379, 16);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 22;
-            this.comboBox1.ValueMember = "IDFirme";
+            this.comboBox1.ValueMember = "ID_w";
             // 
             // firmeBindingSource
             // 

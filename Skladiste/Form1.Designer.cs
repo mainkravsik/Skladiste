@@ -50,9 +50,9 @@
             this.robaTableAdapter = new Skladiste.SkladisteDataSetTableAdapters.RobaTableAdapter();
             this.firmeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.firmeTableAdapter = new Skladiste.SkladisteDataSetTableAdapters.FirmeTableAdapter();
-            this.iDFirmeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oIBFirmeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazivFirmeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_wDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FactoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.robaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skladisteDataSet)).BeginInit();
@@ -64,9 +64,9 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDFirmeDataGridViewTextBoxColumn,
-            this.oIBFirmeDataGridViewTextBoxColumn,
-            this.nazivFirmeDataGridViewTextBoxColumn});
+            this.ID_wDataGridViewTextBoxColumn,
+            this.BEDataGridViewTextBoxColumn,
+            this.FactoryDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.firmeBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(403, 15);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -242,23 +242,23 @@
             // 
             this.firmeTableAdapter.ClearBeforeFill = true;
             // 
-            // iDFirmeDataGridViewTextBoxColumn
+            // ID_wDataGridViewTextBoxColumn
             // 
-            this.iDFirmeDataGridViewTextBoxColumn.DataPropertyName = "IDFirme";
-            this.iDFirmeDataGridViewTextBoxColumn.HeaderText = "IDFirme";
-            this.iDFirmeDataGridViewTextBoxColumn.Name = "iDFirmeDataGridViewTextBoxColumn";
+            this.ID_wDataGridViewTextBoxColumn.DataPropertyName = "ID_w";
+            this.ID_wDataGridViewTextBoxColumn.HeaderText = "ID_w";
+            this.ID_wDataGridViewTextBoxColumn.Name = "ID_wDataGridViewTextBoxColumn";
             // 
-            // oIBFirmeDataGridViewTextBoxColumn
+            // BEDataGridViewTextBoxColumn
             // 
-            this.oIBFirmeDataGridViewTextBoxColumn.DataPropertyName = "OIBFirme";
-            this.oIBFirmeDataGridViewTextBoxColumn.HeaderText = "OIBFirme";
-            this.oIBFirmeDataGridViewTextBoxColumn.Name = "oIBFirmeDataGridViewTextBoxColumn";
+            this.BEDataGridViewTextBoxColumn.DataPropertyName = "BE";
+            this.BEDataGridViewTextBoxColumn.HeaderText = "BE";
+            this.BEDataGridViewTextBoxColumn.Name = "BEDataGridViewTextBoxColumn";
             // 
-            // nazivFirmeDataGridViewTextBoxColumn
+            // FactoryDataGridViewTextBoxColumn
             // 
-            this.nazivFirmeDataGridViewTextBoxColumn.DataPropertyName = "NazivFirme";
-            this.nazivFirmeDataGridViewTextBoxColumn.HeaderText = "NazivFirme";
-            this.nazivFirmeDataGridViewTextBoxColumn.Name = "nazivFirmeDataGridViewTextBoxColumn";
+            this.FactoryDataGridViewTextBoxColumn.DataPropertyName = "Factory";
+            this.FactoryDataGridViewTextBoxColumn.HeaderText = "Factory";
+            this.FactoryDataGridViewTextBoxColumn.Name = "FactoryDataGridViewTextBoxColumn";
             // 
             // Form1
             // 
@@ -317,9 +317,9 @@
         private SkladisteDataSetTableAdapters.RobaTableAdapter robaTableAdapter;
         private System.Windows.Forms.BindingSource firmeBindingSource;
         private SkladisteDataSetTableAdapters.FirmeTableAdapter firmeTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDFirmeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn oIBFirmeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nazivFirmeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_wDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FactoryDataGridViewTextBoxColumn;
     }
 }
 
