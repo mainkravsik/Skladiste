@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SkladisteDataSetQIzdtnice" targetNamespace="http://tempuri.org/SkladisteDataSetQIzdtnice.xsd" xmlns:mstns="http://tempuri.org/SkladisteDataSetQIzdtnice.xsd" xmlns="http://tempuri.org/SkladisteDataSetQIzdtnice.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SkladisteConnectionStringTabRoba" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SkladisteConnectionStringTabRoba (Settings)" PropertyReference="ApplicationSettings.Skladiste.Properties.Settings.GlobalReference.Default.SkladisteConnectionStringTabRoba" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="QIzdatniceTableAdapter" GeneratorDataComponentClassName="QIzdatniceTableAdapter" Name="QIzdatnice" UserDataComponentName="QIzdatniceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SkladisteConnectionStringTabRoba (Settings)" DbObjectName="QIzdatnice" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Izdatnica.IdIzdatnice], NazivFirme, Datum, IDstavkaIzdatnice, [StavkaIzdatnice.IdIzdatnice], Naziv_artikla, Kolicina FROM QIzdatnice</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Izdatnica.IdIzdatnice" DataSetColumn="Izdatnica_IdIzdatnice" />
+              <Mapping SourceColumn="NazivFirme" DataSetColumn="NazivFirme" />
+              <Mapping SourceColumn="Datum" DataSetColumn="Datum" />
+              <Mapping SourceColumn="IDstavkaIzdatnice" DataSetColumn="IDstavkaIzdatnice" />
+              <Mapping SourceColumn="StavkaIzdatnice.IdIzdatnice" DataSetColumn="StavkaIzdatnice_IdIzdatnice" />
+              <Mapping SourceColumn="Naziv_artikla" DataSetColumn="Naziv_artikla" />
+              <Mapping SourceColumn="Kolicina" DataSetColumn="Kolicina" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SkladisteDataSetQIzdtnice" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SkladisteDataSetQIzdtnice" msprop:Generator_UserDSName="SkladisteDataSetQIzdtnice">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="QIzdatnice" msprop:Generator_TableClassName="QIzdatniceDataTable" msprop:Generator_TableVarName="tableQIzdatnice" msprop:Generator_TablePropName="QIzdatnice" msprop:Generator_RowDeletingName="QIzdatniceRowDeleting" msprop:Generator_RowChangingName="QIzdatniceRowChanging" msprop:Generator_RowEvHandlerName="QIzdatniceRowChangeEventHandler" msprop:Generator_RowDeletedName="QIzdatniceRowDeleted" msprop:Generator_UserTableName="QIzdatnice" msprop:Generator_RowChangedName="QIzdatniceRowChanged" msprop:Generator_RowEvArgName="QIzdatniceRowChangeEvent" msprop:Generator_RowClassName="QIzdatniceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Izdatnica_IdIzdatnice" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIzdatnica_IdIzdatnice" msprop:Generator_ColumnPropNameInRow="Izdatnica_IdIzdatnice" msprop:Generator_ColumnPropNameInTable="Izdatnica_IdIzdatniceColumn" msprop:Generator_UserColumnName="Izdatnica_IdIzdatnice" type="xs:int" minOccurs="0" />
+              <xs:element name="NazivFirme" msprop:Generator_ColumnVarNameInTable="columnNazivFirme" msprop:Generator_ColumnPropNameInRow="NazivFirme" msprop:Generator_ColumnPropNameInTable="NazivFirmeColumn" msprop:Generator_UserColumnName="NazivFirme" type="xs:int" minOccurs="0" />
+              <xs:element name="Datum" msprop:Generator_ColumnVarNameInTable="columnDatum" msprop:Generator_ColumnPropNameInRow="Datum" msprop:Generator_ColumnPropNameInTable="DatumColumn" msprop:Generator_UserColumnName="Datum" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IDstavkaIzdatnice" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIDstavkaIzdatnice" msprop:Generator_ColumnPropNameInRow="IDstavkaIzdatnice" msprop:Generator_ColumnPropNameInTable="IDstavkaIzdatniceColumn" msprop:Generator_UserColumnName="IDstavkaIzdatnice" type="xs:int" minOccurs="0" />
+              <xs:element name="StavkaIzdatnice_IdIzdatnice" msprop:Generator_ColumnVarNameInTable="columnStavkaIzdatnice_IdIzdatnice" msprop:Generator_ColumnPropNameInRow="StavkaIzdatnice_IdIzdatnice" msprop:Generator_ColumnPropNameInTable="StavkaIzdatnice_IdIzdatniceColumn" msprop:Generator_UserColumnName="StavkaIzdatnice_IdIzdatnice" type="xs:int" minOccurs="0" />
+              <xs:element name="Naziv_artikla" msprop:Generator_ColumnVarNameInTable="columnNaziv_artikla" msprop:Generator_ColumnPropNameInRow="Naziv_artikla" msprop:Generator_ColumnPropNameInTable="Naziv_artiklaColumn" msprop:Generator_UserColumnName="Naziv_artikla" type="xs:int" minOccurs="0" />
+              <xs:element name="Kolicina" msprop:Generator_ColumnVarNameInTable="columnKolicina" msprop:Generator_ColumnPropNameInRow="Kolicina" msprop:Generator_ColumnPropNameInTable="KolicinaColumn" msprop:Generator_UserColumnName="Kolicina" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

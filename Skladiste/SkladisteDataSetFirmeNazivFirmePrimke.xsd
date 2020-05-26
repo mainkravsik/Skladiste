@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SkladisteDataSetFirmeNazivFirmePrimke" targetNamespace="http://tempuri.org/SkladisteDataSetFirmeNazivFirmePrimke.xsd" xmlns:mstns="http://tempuri.org/SkladisteDataSetFirmeNazivFirmePrimke.xsd" xmlns="http://tempuri.org/SkladisteDataSetFirmeNazivFirmePrimke.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SkladisteConnectionStringTabRoba" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SkladisteConnectionStringTabRoba (Settings)" PropertyReference="ApplicationSettings.Skladiste.Properties.Settings.GlobalReference.Default.SkladisteConnectionStringTabRoba" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FirmeTableAdapter" GeneratorDataComponentClassName="FirmeTableAdapter" Name="Firme" UserDataComponentName="FirmeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SkladisteConnectionStringTabRoba (Settings)" DbObjectName="Firme" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT NazivFirme FROM Firme</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NazivFirme" DataSetColumn="NazivFirme" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SkladisteDataSetFirmeNazivFirmePrimke" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SkladisteDataSetFirmeNazivFirmePrimke" msprop:Generator_UserDSName="SkladisteDataSetFirmeNazivFirmePrimke">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Firme" msprop:Generator_TableClassName="FirmeDataTable" msprop:Generator_TableVarName="tableFirme" msprop:Generator_TablePropName="Firme" msprop:Generator_RowDeletingName="FirmeRowDeleting" msprop:Generator_RowChangingName="FirmeRowChanging" msprop:Generator_RowEvHandlerName="FirmeRowChangeEventHandler" msprop:Generator_RowDeletedName="FirmeRowDeleted" msprop:Generator_UserTableName="Firme" msprop:Generator_RowChangedName="FirmeRowChanged" msprop:Generator_RowEvArgName="FirmeRowChangeEvent" msprop:Generator_RowClassName="FirmeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NazivFirme" msprop:Generator_ColumnVarNameInTable="columnNazivFirme" msprop:Generator_ColumnPropNameInRow="NazivFirme" msprop:Generator_ColumnPropNameInTable="NazivFirmeColumn" msprop:Generator_UserColumnName="NazivFirme" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
