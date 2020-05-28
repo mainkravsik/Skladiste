@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using PathFinding;
 
 namespace Skladiste
 {
@@ -54,29 +55,23 @@ namespace Skladiste
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            FormFirma formaFirma = new FormFirma();
-            formaFirma.Show();
-        }
+        
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            FormIzdatnica formaIzdatnica = new FormIzdatnica();
-            formaIzdatnica.Show();
-        }
+        
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            FormPrimka formaPrimka = new FormPrimka();
-            formaPrimka.Show();
-        }
+        
 
         private void button5_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'skladisteDataSetRoba.Roba' table. You can move, or remove it, as needed.
             //this.robaTableAdapter.Fill(this.skladisteDataSet.Roba);
             this.firmeTableAdapter.Fill(this.skladisteDataSet.Firme);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form_path forma_path = new Form_path();
+            forma_path.Show();
         }
     }
 }
