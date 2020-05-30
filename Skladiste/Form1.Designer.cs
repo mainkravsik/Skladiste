@@ -49,18 +49,28 @@
             this.firmeTableAdapter = new Skladiste.SkladisteDataSetTableAdapters.FirmeTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.warehouseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.warehouseTableAdapter = new Skladiste.SkladisteDataSetTableAdapters.WarehouseTableAdapter();
+            this.iDsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.warehouseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.storageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typestorageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.сapacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emptystorageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firmeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skladisteDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warehouseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -76,7 +86,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(403, 15);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(710, 160);
+            this.dataGridView1.Size = new System.Drawing.Size(881, 160);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -214,75 +224,30 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(20, 308);
+            this.button2.Location = new System.Drawing.Point(20, 368);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 36);
+            this.button2.Size = new System.Drawing.Size(147, 36);
             this.button2.TabIndex = 19;
-            this.button2.Text = "UPDATE";
+            this.button2.Text = "Редактор склада";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.dataGridView2);
             this.groupBox1.Location = new System.Drawing.Point(403, 196);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(710, 234);
+            this.groupBox1.Size = new System.Drawing.Size(882, 234);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.dataGridView2.DataSource = this.firmeBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(191, 22);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(512, 132);
-            this.dataGridView2.TabIndex = 21;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_w";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID_w";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "BE";
-            this.dataGridViewTextBoxColumn2.HeaderText = "BE";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Factory";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Factory";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Warehouse";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Warehouse";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 66);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "label4";
+            this.groupBox1.Text = "Параметры груза";
             // 
             // textBox5
             // 
@@ -291,6 +256,119 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(88, 22);
             this.textBox5.TabIndex = 21;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(22, 66);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 17);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Высота";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4,
+            this.iDsDataGridViewTextBoxColumn,
+            this.warehouseDataGridViewTextBoxColumn,
+            this.storageDataGridViewTextBoxColumn,
+            this.typestorageDataGridViewTextBoxColumn,
+            this.сapacityDataGridViewTextBoxColumn,
+            this.emptystorageDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.warehouseBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(191, 37);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(684, 132);
+            this.dataGridView2.TabIndex = 21;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Warehouse";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Warehouse";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(95, 91);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(88, 22);
+            this.textBox6.TabIndex = 23;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(22, 96);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 17);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Ширина";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(95, 126);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(88, 22);
+            this.textBox7.TabIndex = 25;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(22, 131);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 17);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Длинна";
+            // 
+            // warehouseBindingSource
+            // 
+            this.warehouseBindingSource.DataMember = "Warehouse";
+            this.warehouseBindingSource.DataSource = this.skladisteDataSet;
+            // 
+            // warehouseTableAdapter
+            // 
+            this.warehouseTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDsDataGridViewTextBoxColumn
+            // 
+            this.iDsDataGridViewTextBoxColumn.DataPropertyName = "ID_s";
+            this.iDsDataGridViewTextBoxColumn.HeaderText = "ID_s";
+            this.iDsDataGridViewTextBoxColumn.Name = "iDsDataGridViewTextBoxColumn";
+            // 
+            // warehouseDataGridViewTextBoxColumn
+            // 
+            this.warehouseDataGridViewTextBoxColumn.DataPropertyName = "Warehouse";
+            this.warehouseDataGridViewTextBoxColumn.HeaderText = "Warehouse";
+            this.warehouseDataGridViewTextBoxColumn.Name = "warehouseDataGridViewTextBoxColumn";
+            // 
+            // storageDataGridViewTextBoxColumn
+            // 
+            this.storageDataGridViewTextBoxColumn.DataPropertyName = "Storage";
+            this.storageDataGridViewTextBoxColumn.HeaderText = "Storage";
+            this.storageDataGridViewTextBoxColumn.Name = "storageDataGridViewTextBoxColumn";
+            // 
+            // typestorageDataGridViewTextBoxColumn
+            // 
+            this.typestorageDataGridViewTextBoxColumn.DataPropertyName = "Type_storage";
+            this.typestorageDataGridViewTextBoxColumn.HeaderText = "Type_storage";
+            this.typestorageDataGridViewTextBoxColumn.Name = "typestorageDataGridViewTextBoxColumn";
+            // 
+            // сapacityDataGridViewTextBoxColumn
+            // 
+            this.сapacityDataGridViewTextBoxColumn.DataPropertyName = "Сapacity";
+            this.сapacityDataGridViewTextBoxColumn.HeaderText = "Сapacity";
+            this.сapacityDataGridViewTextBoxColumn.Name = "сapacityDataGridViewTextBoxColumn";
+            // 
+            // emptystorageDataGridViewTextBoxColumn
+            // 
+            this.emptystorageDataGridViewTextBoxColumn.DataPropertyName = "Empty_storage";
+            this.emptystorageDataGridViewTextBoxColumn.HeaderText = "Empty_storage";
+            this.emptystorageDataGridViewTextBoxColumn.Name = "emptystorageDataGridViewTextBoxColumn";
             // 
             // Form1
             // 
@@ -320,6 +398,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warehouseBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,10 +430,19 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.BindingSource warehouseBindingSource;
+        private SkladisteDataSetTableAdapters.WarehouseTableAdapter warehouseTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn warehouseDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn storageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typestorageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn сapacityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emptystorageDataGridViewTextBoxColumn;
     }
 }
 

@@ -158,8 +158,8 @@ namespace PathFinding
             catch (OutOfMemoryException exc)
             {
                 MessageBox.Show("Not enough memmory to create such huge map! Try enter smaller map size values.", exc.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                MapWidth = 50;
-                MapHeight = 43;
+                MapWidth = 100;
+                MapHeight = 100;
                 CellSize = 13;
                 map = new Map[MapWidth + 2, MapHeight + 2];
             }
