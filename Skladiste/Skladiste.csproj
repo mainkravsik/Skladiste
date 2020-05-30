@@ -57,6 +57,12 @@
     <Compile Include="Form_path.designer.cs">
       <DependentUpon>Form_path.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_path_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_path_edit.designer.cs">
+      <DependentUpon>Form_path_edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Help.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_path.resx">
       <DependentUpon>Form_path.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_path_edit.resx">
+      <DependentUpon>Form_path_edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Help.resx">
       <DependentUpon>Help.cs</DependentUpon>

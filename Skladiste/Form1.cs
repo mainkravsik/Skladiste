@@ -72,8 +72,8 @@ namespace Skladiste
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form_path forma_path = new Form_path();
-            forma_path.Show();
+            Form_path_edit forma_path_edit = new Form_path_edit();
+            forma_path_edit.Show();
         }
     }
 }
