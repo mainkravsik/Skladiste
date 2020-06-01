@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Threading;
 using System.IO;
-
+using Skladiste;
 
 namespace PathFinding
 {
@@ -75,7 +75,60 @@ namespace PathFinding
             MapInit();
             setStatus(Status.Stopped);
             //Status_lbl.DataBindings.Add("Text", this, "(int)pathFindingStatus");
-            
+            string s = "D://Учеба//Diplom//Skladiste//"+Form1.name_w+".map";
+            BinaryReader mapIn;
+
+            try
+            {
+                mapIn = new BinaryReader(new FileStream(s, FileMode.Open));
+            }
+            catch (IOException exc)
+            {
+                MessageBox.Show(exc.Message, "Cannot Open File For Input.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            try
+            {
+                MapWidth = mapIn.ReadInt32();
+                MapHeight = mapIn.ReadInt32();
+                drawClearMap();
+                // Извлекаем стоимости прохода :
+                for (int i = 2; i < 7; i++)
+                {
+                    NumericUpDown temp = groupBox3.Controls["numericUpDown" + i] as NumericUpDown;
+                    temp.Value = mapIn.ReadInt32();
+                }
+
+                // Извлекаем идексы точек старта и финиша: 
+                start = (Cell)mapIn.ReadString();
+                finish = (Cell)mapIn.ReadString();
+
+                for (int i = 0; i <= MapWidth + 1; i++)
+                    for (int j = 0; j <= MapHeight + 1; j++)
+                        map[i, j] = (Map)mapIn.ReadString();
+
+                // переводим индексы массива карты в пикссели :
+                if (start != nullCell)
+                {
+                    startCoord.X = (start.xIndex - 1) * (CellSize + 1) + (int)(CellSize / 2);
+                    startCoord.Y = (start.yIndex - 1) * (CellSize + 1) + (int)(CellSize / 2);
+                    drawStart(startCoord);
+                }
+                if (finish != nullCell)
+                {
+                    finishCoord.X = (finish.xIndex - 1) * (CellSize + 1) + (int)(CellSize / 2);
+                    finishCoord.Y = (finish.yIndex - 1) * (CellSize + 1) + (int)(CellSize / 2);
+                    drawFinish(finishCoord);
+                }
+                reDrawMap();
+            }
+            catch (IOException exc)
+            {
+                MessageBox.Show(exc.Message, "Error Reading File.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            mapIn.Close();
+            openFileDialog1.FileName = "";
             SettingsDGR();
          }
 

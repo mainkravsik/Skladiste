@@ -18,6 +18,9 @@ namespace Skladiste
         {
             InitializeComponent();
         }
+        public static String name_w = " ";
+        
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -31,13 +34,7 @@ namespace Skladiste
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //omogućenje pristup podacima iz baze
-            int rowIndex = e.RowIndex;
-           
-            DataGridViewRow row = dataGridView1.Rows[rowIndex];
-            textBox1.Text = row.Cells[0].Value.ToString();
-            textBox2.Text = row.Cells[1].Value.ToString();
-            textBox3.Text = row.Cells[2].Value.ToString();
-            textBox4.Text = row.Cells[3].Value.ToString();
+            
             //richTextBox1.Text = row.Cells[4].Value.ToString();
             //textBox5.Text = row.Cells[5].Value.ToString();   
         }
@@ -74,6 +71,26 @@ namespace Skladiste
         {
             Form_path_edit forma_path_edit = new Form_path_edit();
             forma_path_edit.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form_path forma_path = new Form_path();
+            
+            forma_path.Show();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+
+            DataGridViewRow row = dataGridView1.Rows[rowIndex];
+            textBox1.Text = row.Cells[0].Value.ToString();
+            textBox2.Text = row.Cells[1].Value.ToString();
+            textBox3.Text = row.Cells[2].Value.ToString();
+            textBox4.Text = row.Cells[3].Value.ToString();
+            name_w = row.Cells[3].Value.ToString();
+
         }
     }
 }
