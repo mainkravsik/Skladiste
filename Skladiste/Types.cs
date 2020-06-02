@@ -30,8 +30,9 @@ namespace PathFinding
     {
         public int xIndex;
         public int yIndex;
+        public int load;
 
-        public Cell(int x, int y) { xIndex = x; yIndex = y; }
+        public Cell(int x, int y, int l) { xIndex = x; yIndex = y; load = l; }
         public static Cell operator +(Cell cl1, Cell cl2)
         {
             Cell result = new Cell();
