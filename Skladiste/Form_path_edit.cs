@@ -54,12 +54,12 @@ namespace PathFinding
          
         public Form_path_edit()
         {
-            MapWidth = 50;
-            MapHeight = 43;
+            MapWidth = 100;
+            MapHeight = 100;
             CellSize = 13;
             grInfo = new GrInfo[6];
             
-            nullCell = new Cell(0, 0,0); 
+            nullCell = new Cell(0, 0); 
             InitializeComponent();
             openFileDialog1.InitialDirectory = saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
             
@@ -121,8 +121,8 @@ namespace PathFinding
             catch (OutOfMemoryException exc)
             {
                 MessageBox.Show("Not enough memmory to create such huge map! Try enter smaller map size values.", exc.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                MapWidth = 50;
-                MapHeight = 43;
+                MapWidth = 100;
+                MapHeight = 100;
                 CellSize = 13;
                 map = new Map[MapWidth + 2, MapHeight + 2];
             }
@@ -130,31 +130,28 @@ namespace PathFinding
             for (int i = 1; i <= MapWidth; i++)
                 for (int j = 1; j <= MapHeight; j++)
                 {
-                    int k = 0;
                     map[i, j].StepCoast = 1;
                     map[i, j].type = tType.Road;
-                    map[i, j].cell = new Cell(i, j,k);
+                    map[i, j].cell = new Cell(i, j);
                 }
             // Края карты обрамляем стенами:
             for (int i = 0; i <= MapWidth + 1; i++)
             {
-                int k = 0;
                 map[i, 0].StepCoast = -1;
                 map[i, 0].type = tType.Wall;
-                map[i, 0].cell = new Cell(i, 0,k);
+                map[i, 0].cell = new Cell(i, 0);
                 map[i, MapHeight + 1].StepCoast = -1;
                 map[i, MapHeight + 1].type = tType.Wall;
-                map[i, MapHeight + 1].cell = new Cell(i, MapHeight + 1,k);
+                map[i, MapHeight + 1].cell = new Cell(i, MapHeight + 1);
             }
             for (int i = 0; i <= MapHeight + 1; i++)
             {
-                int k = 0;
                 map[0, i].StepCoast = -1;
                 map[0, i].type = tType.Wall;
-                map[0, i].cell = new Cell(0, i,k);
+                map[0, i].cell = new Cell(0, i);
                 map[MapWidth + 1, i].StepCoast = -1;
                 map[MapWidth + 1, i].type = tType.Wall;
-                map[MapWidth + 1, i].cell = new Cell(MapWidth + 1, i,k);
+                map[MapWidth + 1, i].cell = new Cell(MapWidth + 1, i);
             }
             start = nullCell;
             finish = nullCell;
@@ -233,7 +230,7 @@ namespace PathFinding
         // Возвращает индекс элемента массива, который определяет точка на карте:
         private Cell GetIndexByPozition(Point point)
         {
-            Cell index = new Cell(0, 0,0);
+            Cell index = new Cell(0, 0);
             index.xIndex = (point.X / (CellSize + 1)) + 1;
             index.yIndex = (point.Y / (CellSize + 1)) + 1; 
             return index;
@@ -706,6 +703,11 @@ namespace PathFinding
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form_path_edit_Load(object sender, EventArgs e)
         {
 
         }

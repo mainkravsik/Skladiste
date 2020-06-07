@@ -4,6 +4,9 @@
 
     partial class SkladisteDataSet
     {
+        partial class FirmeDataTable
+        {
+        }
     }
 }
 

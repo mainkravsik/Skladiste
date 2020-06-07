@@ -51,7 +51,7 @@ namespace PathFinding
                 return searchingThread.IsAlive;
            }
        }
-        Cell nullPoint = new Cell(-1, -1,0);
+        Cell nullPoint = new Cell(-1, -1);
         List<Map> OpenList ;
         List<Map> CloseList ;
         Cell start, finish;
@@ -150,8 +150,8 @@ namespace PathFinding
 
         private void getSuccesors(Cell cell, Map[,] map, out Cell[] succesors)
         {
-             succesors = new Cell[8] { new Cell(0,-1,0), new Cell(1,-1,0), new Cell(1,0,0), new Cell(1,1,0), 
-                                        new Cell(0,1,0), new Cell(-1,1,0), new Cell(-1,0,0), new Cell(-1,-1,0)};
+             succesors = new Cell[8] { new Cell(0,-1), new Cell(1,-1), new Cell(1,0), new Cell(1,1), 
+                                        new Cell(0,1), new Cell(-1,1), new Cell(-1,0), new Cell(-1,-1)};
              for (int i = 0; i < 8; i++)
              {
                  succesors[i].xIndex += cell.xIndex;
@@ -178,7 +178,7 @@ namespace PathFinding
             
             int ListCap = Math.Abs(start.xIndex-finish.xIndex) + Math.Abs(start.yIndex - finish.yIndex);
             
-            Cell p = new Cell(start.xIndex, start.yIndex,start.load);
+            Cell p = new Cell(start.xIndex, start.yIndex/*,start.load*/);
             Cell pTemp = p;
             map[p.xIndex, p.yIndex].cell = p;
             map[p.xIndex, p.yIndex].gValue = 0;

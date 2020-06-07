@@ -40,19 +40,19 @@ namespace Skladiste
         }
 
         //metoda button kontrola za UPDATE BAZE
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //robaTableAdapter.Update(skladisteDataSet);
-                firmeTableAdapter.Update(skladisteDataSet);
-                MessageBox.Show("Database updated");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        //robaTableAdapter.Update(skladisteDataSet);
+        //        firmeTableAdapter.Update(skladisteDataSet);
+        //        MessageBox.Show("Database updated");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //}
 
         
 

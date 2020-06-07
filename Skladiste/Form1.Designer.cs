@@ -45,11 +45,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.firmeTableAdapter = new Skladiste.SkladisteDataSetTableAdapters.FirmeTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -66,6 +66,7 @@
             this.сapacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emptystorageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.warehouseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.firmeTableAdapter = new Skladiste.SkladisteDataSetTableAdapters.FirmeTableAdapter();
             this.warehouseTableAdapter = new Skladiste.SkladisteDataSetTableAdapters.WarehouseTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firmeBindingSource)).BeginInit();
@@ -87,10 +88,10 @@
             this.Warehouse});
             this.dataGridView1.DataSource = this.firmeBindingSource;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.Location = new System.Drawing.Point(403, 15);
+            this.dataGridView1.Location = new System.Drawing.Point(355, 15);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(881, 160);
+            this.dataGridView1.Size = new System.Drawing.Size(929, 160);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -209,20 +210,6 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Склад";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(238, 180);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 36);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "UPDATE";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
@@ -233,13 +220,9 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(147, 36);
             this.button5.TabIndex = 18;
-            this.button5.Text = "Ucitaj bazu/osvjezi";
+            this.button5.Text = "Обновление БД";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // firmeTableAdapter
-            // 
-            this.firmeTableAdapter.ClearBeforeFill = true;
             // 
             // button2
             // 
@@ -258,6 +241,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.groupBox1.Controls.Add(this.button6);
+            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.label7);
@@ -267,11 +252,37 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.dataGridView2);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.groupBox1.Location = new System.Drawing.Point(403, 196);
+            this.groupBox1.Location = new System.Drawing.Point(355, 196);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(882, 234);
+            this.groupBox1.Size = new System.Drawing.Size(930, 234);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button6.ForeColor = System.Drawing.SystemColors.Window;
+            this.button6.Location = new System.Drawing.Point(406, 177);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(147, 36);
+            this.button6.TabIndex = 29;
+            this.button6.Text = "Поступление ТМЦ";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.ForeColor = System.Drawing.SystemColors.Window;
+            this.button4.Location = new System.Drawing.Point(561, 177);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(147, 36);
+            this.button4.TabIndex = 28;
+            this.button4.Text = "Отгрузка ТМЦ";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -283,7 +294,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(147, 36);
             this.button3.TabIndex = 27;
-            this.button3.Text = "Найти путь";
+            this.button3.Text = "Свободный режим";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -410,6 +421,10 @@
             this.warehouseBindingSource.DataMember = "Warehouse";
             this.warehouseBindingSource.DataSource = this.skladisteDataSet;
             // 
+            // firmeTableAdapter
+            // 
+            this.firmeTableAdapter.ClearBeforeFill = true;
+            // 
             // warehouseTableAdapter
             // 
             this.warehouseTableAdapter.ClearBeforeFill = true;
@@ -423,7 +438,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -461,7 +475,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
         private SkladisteDataSet skladisteDataSet;
         
@@ -490,6 +503,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn сapacityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emptystorageDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button4;
     }
 }
 
